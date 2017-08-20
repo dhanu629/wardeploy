@@ -15,6 +15,16 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+<distributionManagement>
+  <repository>
+    <id>releases</id>
+    <url>http://192.168.80.129:8080/nexus-2.11.4-01/content/repositories/releases</url>
+  </repository>
+<repository>
+    <id>snapshot</id>
+    <url>http://192.168.80.129:8080/nexus-2.11.4-01/content/repositories/snapshots</url>
+  </repository>
+</distributionManagement>
   <build>
     <finalName>project1</finalName>
   </build>
