@@ -4,7 +4,7 @@
   <groupId>dhanunjay.rahul</groupId>
   <artifactId>project1</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>project1 Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -17,8 +17,8 @@
   </dependencies>
 <distributionManagement>
   <repository>
-     <id>snapshot</id>
-    <url>http://192.168.80.129:8080/nexus-2.11.4-01/content/repositories/snapshots</url>
+     <id>releases</id>
+    <url>http://192.168.80.129:8080/nexus-2.11.4-01/content/repositories/releases</url>
   </repository>
 </distributionManagement>
   <build>
