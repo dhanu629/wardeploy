@@ -1,4 +1,4 @@
-tomcat = new com.cb.web.Tomcat(hostname: "192.168.80.129", port: "8080", User: "admin", Password: "admin")
+tomcat = new com.cb.web.Tomcat(hostname: "localhost", port: "8080", User: "tomcat1", Password: "rahul")
 
 // Simple utility
 util = new com.cb.util.BasicUtilities()
