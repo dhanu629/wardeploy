@@ -39,6 +39,7 @@ pipeline {
            
               sh 'mvn -f project1/pom.xml deploy'
                 echo 'Building..'
+                sh 'cp project1/target/project1.war /u01/tomcat8/webapps/'
                 }
           
         }
