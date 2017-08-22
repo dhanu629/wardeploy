@@ -9,8 +9,9 @@ pipeline {
     stages {
            
         stage('Compile') {
-            git'https://github.com/dhanu629/wardeploy/tree/master/project1'
+            
             steps {
+                git'https://github.com/dhanu629/wardeploy/tree/master/project1'
             
               sh 'mvn clean compile'
                 echo 'Compiling.'
