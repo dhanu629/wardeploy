@@ -8,7 +8,7 @@ pipeline {
 
     stages {
         stage('preparation') {
-            git '
+            git 'https://github.com/dhanu629/wardeploy/tree/master/project1'
            
         }
         
