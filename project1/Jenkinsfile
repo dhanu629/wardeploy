@@ -9,6 +9,7 @@ pipeline {
     stages {
            
         stage('Compile') {
+            git'https://github.com/dhanu629/wardeploy/tree/master/project1'
             steps {
             
               sh 'mvn clean compile'
