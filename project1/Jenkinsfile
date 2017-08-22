@@ -21,7 +21,7 @@ pipeline {
        stage('Testing') {
             steps {
             
-              sh 'mvn test'
+              sh 'mvn -f project1/pom.xml test'
                 echo 'Testing..'
                 }
            
@@ -29,7 +29,7 @@ pipeline {
        stage('Deploy') {
             steps {
            
-              sh 'mvn deploy'
+              sh 'mvn -f project1/pom.xml deploy'
                 echo 'Building..'
                 }
           
