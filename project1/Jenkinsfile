@@ -8,6 +8,14 @@ pipeline {
     }
 
     stages {
+        stage('Preparation') {
+            
+            steps {
+               git'git@github.com:dhanu629/wardeploy.git'
+            
+                   }
+           
+        }
            
         stage('Compile') {
             
