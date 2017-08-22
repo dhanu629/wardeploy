@@ -3,7 +3,8 @@ pipeline {
         label "master"
     }
     tools{
-     maven 'maven3.3.9'   
+     maven 'maven3.3.9'  
+     git'git@github.com:dhanu629/wardeploy.git'
     }
 
     stages {
@@ -11,7 +12,7 @@ pipeline {
         stage('Compile') {
             
             steps {
-                git'git@github.com:dhanu629/wardeploy.git'
+               
             
               sh 'mvn -f project1/pom.xml clean compile'
                 echo 'Compiling.'
