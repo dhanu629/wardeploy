@@ -13,7 +13,7 @@ pipeline {
             steps {
                 git'git@github.com:dhanu629/wardeploy.git'
             
-              sh 'mvn clean compile'
+              sh 'mvn -f project1/pom.xml clean compile'
                 echo 'Compiling.'
                 }
            
