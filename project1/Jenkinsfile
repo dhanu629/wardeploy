@@ -20,8 +20,7 @@ pipeline {
         stage('Compile') {
             
             steps {
-               git'git@github.com:dhanu629/wardeploy.git'
-            
+                          
               sh 'mvn -f project1/pom.xml clean compile'
                 echo 'Compiling.'
                 }
