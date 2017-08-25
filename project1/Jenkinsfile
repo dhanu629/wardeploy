@@ -1,30 +1,48 @@
 pipeline {
-    agent any
+    agent {
+        label "master"
+    }
+    tools{
+     maven 'maven3.3.9'  
+     
+    }
 
     stages {
-        stage('Compile') {
+        stage('Preparation') {
+            
             steps {
-            withMaven(maven : 'maven3.3.9'){
-              sh 'mvn clean compile'
+               git'git@github.com:dhanu629/wardeploy.git'
+            
+                   }
+           
+        }
+           
+        stage('Compile') {
+            
+            steps {
+                          
+              sh 'mvn -f project1/pom.xml clean compile'
                 echo 'Compiling.'
                 }
-            }
+           
         }
        stage('Testing') {
             steps {
-            withMaven(maven : 'maven3.3.9'){
-              sh 'mvn test'
+            
+              sh 'mvn -f project1/pom.xml test'
                 echo 'Testing..'
                 }
-            }
+           
         }
        stage('Deploy') {
             steps {
-            withMaven(maven : 'maven3.3.9'){
-              sh 'mvn deploy'
+           
+              sh 'mvn -f project1/pom.xml deploy'
                 echo 'Building..'
+                sh 'cp -f project1/target/project1.war /u01/tomcat8/webapps/'
+                echo 'Deployed to tomcat'
                 }
-            }
+          
         }
     }
 }
